@@ -1,0 +1,85 @@
+Performance of an algorithm in terms of input size:
+---> TIME - amount of time taken by an algorithm to run as a function of input size.
+---> SPACE - amount of memory taken by an algorithm to run as a function of input size.
+
+By evaluatingagainst the input size, the analysis is not only machine independent
+but the comparison is also more appropriate. To represent complexities ---> AYSMPTOTIC NOTATIONS
+
+AYSMPTOTIC NOTATIONS --- mathematical tools to represent time and space complexity
+* Big-O notation (O-notation) ---> worst case complexity(upper bound of running time of an algo)
+* Theta notation (θ - notation) ---> average case complexity(encloses the function from above and below)
+* Omega notation (Ω - notation) ---> best case complexity(lower bound of running time of an algo)
+
+When an Algorithm’s runtime and space complexityareanalyzed, it is important to consider 
+what case is to be analyzed. In the worst case, the time complexity is usually the goal for 
+optimization ,as this will ensure the algorithm performs consistently regardless of the situation.
+
+Big-O(Worst Case) - It is defined as the condition that allows an algorithm to complete statement 
+execution in the longest amount of time possible.
+
+The BEST CASE ANALYSIS ---> determines what happens tothefunction when the best possible input is 
+provided.For example,the best case is that value being searched for is found at the beginning 
+of the array.To compare the first element,only one operation is done.
+In the Best Case time,complexity,and space complexityaredenoted by ΩΩ character.
+To denote that th ebest-case time complexity is 1 operation, it takes Ω(1)time.
+This is known as “Constant time,"since it takes a constant amount of time regardless of the 
+array size. If a function is completed in a constant time, the value 1is used to denote that 
+it is a constant time function.
+
+The AVERAGE CASE ANALYSIS --->  is denoted using the θ character.It represents what is expected to
+happen in the average situation of using this algorithm.Average case analysis iscomplex.The idea 
+of average can vary greatly based on the use case;it is quite hard to define.For the search algorithm,
+it is said that the average case would be ofthe value which is found somewhere in the middle of the array. 
+In this situation, it would take𝑛 n/2=1/2𝑛 operations in the value.When the asymptotic analysis
+is done,every constant value is dropped,and the highest term value in the resulting function 
+is kept.This means that 1/2𝑛 becomes just 𝑛, it is said that the average case is θ(𝑛)time.
+
+The WORST CASE ANALYSIS ---> is denoted using the O character.It represents what happens in the worst
+case when an algorithm runs.For example,the worst case is that the whole array must be searched.
+This means 𝑛 comparisons must be made giving the efficiency O(𝑛).
+
+Comparing Algorithm Efficiency - There are different efficiency functionsfor algorithms.
+* CONSTANT TIME ---> A constant time algorithm is an ideal situation to aim for. In the constant 
+time approach, the algorithm is just as fast, regardless of the input size. When representing
+constant values,just put to the value one, θ(1),Ω(1),O(1)represents the average,
+worst,or average best of the worst case in that order,the one that just represents the 
+constant time for the algorithm to complete.
+The time that it takes for the algorithm to run does not change based on the inputs. 
+No matter how big the inputsare, the time is constant. Thisis the ideal situation.This is the 
+best possible runtime an algorithm can have.
+
+* LOGARITHMIC TIME ---> Logarithmic time is when the runtime grows at a rate of log(n),wheren 
+is the size of the input.Itcan be represented as θ(log(n)),Ω(log(n)),O(log(n)).log(n)means that 
+the time it takes for the algorithm to run grows logarithmically with the input size.
+Every single time an algorithm iterates, it increases the size of the input.Logarithmic is the 
+next fastest compared to constant time.
+
+* POLYNOMIAL TIME ---> Polynomial time describes any runtime that can be represented as n^a,
+where n is the input size and a is some positive integer value. n is linear, and it is shown in
+a straight red line increasing linearly.n^2 increases like a quadratic and is slightly slower 
+than linear. n^3 would be increasing faster than n^2 and it would be increasing even faster 
+than the linear n. If the value of a is relatively small,it would consider most things that 
+run in polynomial time solvable by computers.Polynomial-timeis seen as a good runtime for an 
+algorithm. It is slower than logarithmic time, but still fast enough to runonany modern computer.
+
+*EXPONENTIAL TIME ---> Exponential time describes any runtime that can be represented as a^n,
+where n is the input size, and a is some integer value greater than 1.When something grows 
+exponentially, it tends to grow extremely fast.As n grows large,which doesn't even have to be 
+really that big, there is no hope of solving the problem with a modern computer.
+
+ CIMPLEXITY CLASSES ---> Let’s group the algorithm efficiencies into three main classes, known as P, NP, and NP-complete.
+Let’s discuss each class in more detail. Class P consists of all problems that can be solved in 
+polynomial time.To be more specific, we want problems that can be solved in worst case polynomial time, 
+meaning that the worst case efficiencyisO(na). 
+Many ofthe problemsthatarise inthe daily programming will be in classP.The class NP consists of problems 
+that can be verified in polynomial time.Here, verifiedmeans if a solutionis given to the problem, 
+it would be easy toverify that the solution is valid in polynomial time.Any problem in P is also in NP, 
+but it is not guaranteed that every problem in NP is also in P.NP problems can be verified in polynomial 
+time, but they cannot be solved.The class NP-complete is the set of all NP problems that are equally hard 
+to solve. It is possible to turn one instance of a problem into an equivalent instance of another problem.
+If it is possible to solve one problem in NP-complete in polynomial time,then it is also possible to solve
+all the problems in polynomial time.It is important to understand that there are some problems that cannot
+be solved with computers. Some of these problems are in NP and are not solvable in polynomial time. 
+If a way is found to solve these problems in polynomial time, it would revolutionize the computing 
+industry.
+
